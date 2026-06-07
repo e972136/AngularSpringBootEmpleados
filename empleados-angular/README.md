@@ -2,12 +2,23 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.0.
 
+# Paquetes adicionales
+
+```bash
+npm install @ng-bootstrap/ng-bootstrap --legacy-peer-deps
+```
+
+```bash
+npm install sweetalert2@11.26.25 --legacy-peer-deps
+```
+
+
 ## Development server
 
 To start a local development server, run:
 
 ```bash
-ng serve
+ng serve -o
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
