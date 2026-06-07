@@ -2,7 +2,12 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.0.
 
+# Portal Instalacion Angular
+https://angular.dev/installation
+
 # Paquetes adicionales
+
+https://ng-bootstrap.github.io/#/home
 
 ```bash
 npm install @ng-bootstrap/ng-bootstrap --legacy-peer-deps
@@ -12,6 +17,10 @@ npm install @ng-bootstrap/ng-bootstrap --legacy-peer-deps
 npm install sweetalert2@11.26.25 --legacy-peer-deps
 ```
 
+# Generar ambientes
+```bash
+ng generate environments
+```
 
 ## Development server
 
