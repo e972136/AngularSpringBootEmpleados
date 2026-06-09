@@ -22,6 +22,13 @@ public class EmpleadoController {
         return ResponseEntity.ok(empleadoService.listado());
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Empleado> obtenerEmpleado(
+        @PathVariable Integer id
+    ){
+        return ResponseEntity.ok(empleadoService.obtenerId(id));
+    }
+
     @PutMapping("/")
     public ResponseEntity<Empleado> guardar(
             @RequestBody Empleado nuevo

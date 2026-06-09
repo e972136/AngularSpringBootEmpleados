@@ -21,4 +21,9 @@ public class EmpleadoService {
     public Empleado guardar(Empleado nuevo) {
         return empleadoRepository.save(nuevo);
     }
+
+    public Empleado obtenerId(Integer id) {
+        return empleadoRepository.findById(id)
+                .orElse(new Empleado());
+    }
 }
