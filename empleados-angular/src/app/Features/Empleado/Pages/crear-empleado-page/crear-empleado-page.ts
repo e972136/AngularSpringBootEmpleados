@@ -4,6 +4,7 @@ import { EmpleadoService } from '../../Service/empleado-service';
 import { EmpleadoModel } from '../../Models/empleado-model';
 import { Posicion } from '../../../../Shared/Interfaces/posicion';
 import { form, required, validate } from '@angular/forms/signals';
+import { Empleado } from '../../../../Shared/Interfaces/empleado';
 
 @Component({
   selector: 'app-crear-empleado-page',
@@ -48,4 +49,32 @@ export class CrearEmpleadoPage implements OnInit {
         error:(e) => {console.log(e.error)}
     })
   }
+
+  onSave() {
+    const request: Empleado = {
+      id: 0,
+      nombre: this.empleadoForm.nombre().value(),
+      correo: this.empleadoForm.correo().value(),
+      fechaNacimiento: this.empleadoForm.fechaNacimiento().value(),
+      posicionId: Number(this.empleadoForm.posicionId().value())
+    }
+
+    this.empleadoService.create(request).subscribe({
+        next: response => {
+
+        }
+    })
+  }
+
+  private resetForm(): void{
+    this.empleadoModel.set({
+           id:"0",
+         nombre:"",
+         correo:"",
+         fechaNacimiento:"",
+         posicionId:"0"
+    })
+    this.empleadoForm().reset;
+  }
+
 }

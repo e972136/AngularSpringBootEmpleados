@@ -1,5 +1,6 @@
 package com.gaspar.empleados.controller;
 
+import com.gaspar.empleados.dto.EmpleadoResponse;
 import com.gaspar.empleados.model.Empleado;
 import com.gaspar.empleados.service.EmpleadoService;
 import org.springframework.http.ResponseEntity;
@@ -18,19 +19,19 @@ public class EmpleadoController {
     }
 
     @GetMapping("/listado")
-    public ResponseEntity<List<Empleado>> listado(){
+    public ResponseEntity<List<EmpleadoResponse>> listado(){
         return ResponseEntity.ok(empleadoService.listado());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Empleado> obtenerEmpleado(
+    public ResponseEntity<EmpleadoResponse> obtenerEmpleado(
         @PathVariable Integer id
     ){
         return ResponseEntity.ok(empleadoService.obtenerId(id));
     }
 
     @PutMapping("/")
-    public ResponseEntity<Empleado> guardar(
+    public ResponseEntity<EmpleadoResponse> guardar(
             @RequestBody Empleado nuevo
     ){
         return ResponseEntity.ok(empleadoService.guardar(nuevo));

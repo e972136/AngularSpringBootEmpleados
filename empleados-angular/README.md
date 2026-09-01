@@ -5,6 +5,12 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 # Portal Instalacion Angular
 https://angular.dev/installation
 
+# Version angular
+
+```bash
+ng version
+```
+
 # Paquetes adicionales
 
 https://ng-bootstrap.github.io/#/home
@@ -77,3 +83,35 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Video de referencia 
+- https://www.youtube.com/watch?v=5yk9EIN2JvQ
+
+## Para ejecutar
+
+- ng serve -o
+
+## Comandos ejecutados
+
+ng new empleados-angular --skip-tests
+- css
+- no renderizado
+- no tools ia
+
+## https://ng-bootstrap.github.io/#/home
+
+npm install @ng-bootstrap/ng-bootstrap --legacy-peer-deps
+
+npm install sweetalert2@11.26.25 --legacy-peer-deps
+
+ng generate environments
+
+## Para generar interfaces o modelo de comunicacion con las api
+ng generate interface Shared/Interfaces/Empleado
+
+## Para generar servicios
+ng generate service Features/Empleado/Service/empleado-service --skip-tests
+
+ng g i Features/Empleado/Models/empleado-model
+
+ng g c Features/Empleado/Pages/crear-empleado-page --skip-tests

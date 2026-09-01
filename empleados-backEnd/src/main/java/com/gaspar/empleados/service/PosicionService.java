@@ -5,6 +5,9 @@ import com.gaspar.empleados.repository.PosicionRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 @Service
 public class PosicionService {
@@ -16,5 +19,9 @@ public class PosicionService {
 
     public List<Posicion> listado() {
         return posicionRepository.findAll();
+    }
+
+    public Map<Integer,Posicion> mapa(){
+        return posicionRepository.findAll().stream().collect(Collectors.toMap(Posicion::getId, Function.identity()));
     }
 }
